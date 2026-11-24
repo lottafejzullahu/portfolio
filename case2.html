@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekttitel | Lotta Fejzullahu</title>
+  <meta name="description" content="UX-case av Lotta Fejzullahu.">
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --text: #1a1a1a;
+      --muted: #6b6b66;
+      --line: #e4e4df;
+      --accent: #3b5bdb;
+      --card: #ffffff;
+      --max: 960px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111112;
+        --text: #f1f1ee;
+        --muted: #9a9a94;
+        --line: #2a2a2c;
+        --accent: #8da2ff;
+        --card: #19191b;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header { padding: 28px 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 600; letter-spacing: -0.01em; }
+    nav ul { display: flex; gap: 28px; list-style: none; }
+    nav a { color: var(--muted); font-size: 0.95rem; transition: color .2s; }
+    nav a:hover { color: var(--text); }
+
+    /* Back link */
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color .2s, transform .2s;
+    }
+    .back:hover { color: var(--accent); transform: translateX(-3px); }
+
+    /* Hero */
+    .hero { padding: 48px 0 80px; }
+    .eyebrow { color: var(--accent); font-weight: 500; font-size: 0.9rem; margin-bottom: 16px; }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      font-weight: 650;
+      max-width: 16ch;
+    }
+    .hero p {
+      margin-top: 24px;
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    /* Sections */
+    section { padding: 64px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 500; margin-bottom: 36px; }
+
+    /* Case sections */
+    .case { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+    .case h2 { margin-bottom: 0; }
+    .case p { color: var(--muted); max-width: 60ch; }
+    .case p + p { margin-top: 16px; }
+
+    /* Image placeholders */
+    figure { margin-top: 48px; }
+    .thumb {
+      aspect-ratio: 16 / 9;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: repeating-linear-gradient(45deg, var(--bg), var(--bg) 12px, var(--line) 12px, var(--line) 13px);
+    }
+    figcaption { margin-top: 12px; color: var(--muted); font-size: 0.85rem; }
+
+    footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+
+    @media (max-width: 720px) {
+      .case { grid-template-columns: 1fr; gap: 20px; }
+      .case h2 { margin-bottom: 0; }
+      .hero { padding: 32px 0 48px; }
+      nav ul { gap: 18px; }
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav aria-label="Huvudmeny">
+        <a href="index.html" class="logo">Lotta Fejzullahu</a>
+        <ul>
+          <li><a href="index.html#projekt">Projekt</a></li>
+          <li><a href="index.html#om-mig">Om mig</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="back">← Tillbaka till startsidan</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="hero">
+        <p class="eyebrow">UX-case</p>
+        <h1>Projekttitel</h1>
+        <p>Här skriver du en kort sammanfattning av projektet i två till tre meningar: vilket problem du tog dig an, vad du gjorde och vilket resultat du nådde.</p>
+      </div>
+
+      <section id="problemet">
+        <div class="case">
+          <h2>Problemet</h2>
+          <div>
+            <p>Beskriv utgångsläget. Vem är användaren, vilket problem eller behov fanns, och varför var det viktigt att lösa?</p>
+            <p>Lägg gärna till bakgrund, mål och eventuella begränsningar i projektet.</p>
+          </div>
+        </div>
+        <figure>
+          <div class="thumb" role="img" aria-label="Platshållare för bild 1">Bild 1</div>
+          <figcaption>Bildtext till bild 1</figcaption>
+        </figure>
+      </section>
+
+      <section id="roll-process">
+        <div class="case">
+          <h2>Min roll &amp; process</h2>
+          <div>
+            <p>Beskriv vilken roll du hade och om du arbetade själv eller i team.</p>
+            <p>Gå igenom din process steg för steg, till exempel research, analys, idéarbete, prototyper och användartester.</p>
+          </div>
+        </div>
+        <figure>
+          <div class="thumb" role="img" aria-label="Platshållare för bild 2">Bild 2</div>
+          <figcaption>Bildtext till bild 2</figcaption>
+        </figure>
+      </section>
+
+      <section id="losningen">
+        <div class="case">
+          <h2>Lösningen</h2>
+          <div>
+            <p>Presentera den slutliga designen och förklara hur den löser användarnas problem.</p>
+            <p>Lyft fram de viktigaste designbesluten och vad de byggde på.</p>
+          </div>
+        </div>
+        <figure>
+          <div class="thumb" role="img" aria-label="Platshållare för bild 3">Bild 3</div>
+          <figcaption>Bildtext till bild 3</figcaption>
+        </figure>
+      </section>
+
+      <section id="lardomar">
+        <div class="case">
+          <h2>Lärdomar</h2>
+          <div>
+            <p>Reflektera över vad projektet lärde dig och vad som gick bra.</p>
+            <p>Berätta också vad du skulle göra annorlunda nästa gång.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Lotta Fejzullahu</div>
+  </footer>
+
+</body>
+</html>
